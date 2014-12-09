@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Airport</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>Airport - расписание самолетов и подбор дешевых билетов, Аэропорт Уфа</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <noindex>
+    <div class="head">
+      <script charset="utf-8" async="true" src="//www.travelpayouts.com/widgets/19d5d6ae348406549b87213dded3a993.js?v=323"></script>
+    </div>
+  </noindex>
+  <div class="container-fluid">
+    <%= yield %>
+  </div>
 </body>
 </html>

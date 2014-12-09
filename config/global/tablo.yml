@@ -1,0 +1,8 @@
+development:
+  url: "http://www.airportufa.ru/regularFlight/read?day=%d&operation=%d&limit=0"
+
+production:
+  url: "http://www.airportufa.ru/regularFlight/read?day=%d&operation=%d&limit=0"
+
+test:
+  url: "http://www.airportufa.ru/regularFlight/read?day=%d&operation=%d&limit=0"

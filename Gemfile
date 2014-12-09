@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
 # Use mysql as the database for Active Record
@@ -17,7 +16,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+# gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -38,3 +37,46 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'russian' # russian lang
+gem 'bootstrap-sass', '~> 3.2.0' # bootstrap
+gem 'autoprefixer-rails' # css prefixer
+
+# gem 'nprogress-rails' # turbolinks progressbar
+gem 'annotate' # auto annotate models from DB
+gem 'font-awesome-sass' # fonts
+gem 'global' # global configs in yml files
+gem 'rufus-scheduler' # background tasks scheduler
+
+group :production do
+  gem 'unicorn'
+  gem 'utf8-cleaner'
+end
+
+group :development do
+  # gem 'mina'
+  gem 'net-ssh', "~> 2.7.0"
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'sextant'
+  gem 'quiet_assets'
+  gem 'bullet'
+  gem "rvm-capistrano"
+
+  gem 'guard-rspec'
+  gem 'terminal-notifier-guard'
+end
+
+group :test do
+  gem 'webmock', '~> 1.20.4'
+end
+
+group :test, :development do
+  gem 'spring-commands-rspec', '~> 1.0.2'
+  gem "rspec-rails", "~> 3.0"
+  gem "factory_girl_rails", "~> 4.0"
+  gem "faker"
+  gem "capybara"
+  gem 'capybara-screenshot'
+  gem "database_cleaner"
+  gem 'vcr', '~> 2.9.3'
+end
