@@ -1,3 +1,22 @@
-// Place all the styles related to the Timetable controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.timetable{
+  td{
+    color: #666;
+  }
+  .strong{
+    color: #000;
+  }
+  .text-center{
+    text-align: center;
+  }
+}
+
+.nav-tabs > li, .nav-pills > li {
+  float:none;
+  display:inline-block;
+  *display:inline; /* ie7 fix */
+  zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs, .nav-pills {
+  text-align:center;
+}

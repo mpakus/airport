@@ -1,4 +1,6 @@
+//= require sortable/css/sortable-theme-bootstrap
 //= require theme
+//= require timetable
 
 .head{
   background: #009FD7;
@@ -7,4 +9,20 @@
 
 h1, h2, h3, h4, h5{
   color: #009FD7;
+}
+
+.footer{
+  background: #EFEFEF;
+  padding: 20px;
+  .powered{
+    display: inline-block;
+    padding: 5px;
+    background: #E50071;
+    color: #FFF;
+    text-decoration: none;
+    &:hover{
+      background: #333;
+      strong{ color: #32A9FC; }
+    }
+  }
 }

@@ -46,6 +46,7 @@ gem 'annotate' # auto annotate models from DB
 gem 'font-awesome-sass' # fonts
 gem 'global' # global configs in yml files
 gem 'rufus-scheduler' # background tasks scheduler
+gem "bower-rails", "~> 0.9.1" # js packet manager
 
 group :production do
   gem 'unicorn'

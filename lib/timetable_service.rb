@@ -15,7 +15,9 @@ class TimetableService
   end
 
   def get_tablo(when_it, direction)
-    Timetable.where(when_it: when_it).where(direction: direction).where('DATE(created_at) = ?', Date.today).first
+    tt   = Timetable.where(when_it: when_it).where(direction: direction).where('DATE(created_at) = ?', Date.today).first
+    tt ||= Timetable.where(when_it: when_it).where(direction: direction).last
+    tt
   end
 
   def get_schedule(when_it, direction)

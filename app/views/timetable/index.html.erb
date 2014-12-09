@@ -1,12 +1,41 @@
-<h1>Расписание полетов Уфа - ...</h1>
+<h1><span class="glyphicon glyphicon-send"></span> Расписание полетов Уфа - ...</h1>
 <div class="row">
-  <div class="col-lg-6">
-    <h3>Прибытие</h3>
-    <%= render partial: 'tablo', locals: {tablo: @tablo_in, direction: 'Откуда'} %>
+
+  <div role="tabpanel">
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#today" aria-controls="today" role="tab" data-toggle="tab" title="Поиск дешевых билетов из Уфы на сегодня">Сегодня</a></li>
+      <li role="presentation"><a href="#tomorrow" aria-controls="tomorrow" role="tab" data-toggle="tab" title="Дешевые авиа билеты завтра из Уфы">Завтра</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane fade in active" id="today">
+        <div class="col-lg-6">
+          <h3>Прибытие</h3>
+          <%= render partial: 'tablo', locals: {tablo: @tablo_in, direction: 'Откуда'} %>
+        </div>
+
+        <div class="col-lg-6">
+          <h3>Отправление</h3>
+          <%= render partial: 'tablo', locals: {tablo: @tablo_out, direction: 'Куда'} %>
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="tomorrow">
+        <div class="col-lg-6">
+          <h3>Прибытие</h3>
+          <%= render partial: 'tablo', locals: {tablo: @tablo_in_tomorrow, direction: 'Откуда'} %>
+        </div>
+
+        <div class="col-lg-6">
+          <h3>Отправление</h3>
+          <%= render partial: 'tablo', locals: {tablo: @tablo_out_tomorrow, direction: 'Куда'} %>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 
-  <div class="col-lg-6">
-    <h3>Отправление</h3>
-    <%= render partial: 'tablo', locals: {tablo: @tablo_out, direction: 'Куда'} %>
-  </div>
+
 </div>

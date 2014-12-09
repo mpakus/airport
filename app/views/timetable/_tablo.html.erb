@@ -1,20 +1,22 @@
-<table class="table table-striped table-hover">
+<table class="timetable table table-hover sortable-bootstrap  sortable-theme-bootstrap" data-sortable>
+  <thead>
   <tr>
-    <th>Время (UFA)</th>
-    <th>Рейс</th>
-    <th><%= direction %></th>
-    <th>Авиакомпания</th>
-    <th>Терминал</th>
-    <th>Статус</th>
+    <th data-sortable="true">Время (UFA)</th>
+    <th data-sortable="true">Рейс</th>
+    <th data-sortable="true"><%= direction %></th>
+    <th data-sortable="true">Авиакомпания</th>
+    <th data-sortable="true">Терминал</th>
+    <th data-sortable="true">Статус</th>
   </tr>
+  </thead>
 
 <% tablo.each do |row| %>
   <tr>
-    <td><%= row['time'] %></td>
+    <td class="strong"><%= row['time'] %></td>
     <td><%= row['flight_number'] %></td>
-    <td><%= row['airport_ru'] %></td>
+    <td class="strong"><%= row['airport_ru'] %></td>
     <td><%= row['aircompany']['name_ru'] %></td>
-    <td><%= row['terminal'] %></td>
+    <td class="text-center"><%= row['terminal'] %></td>
     <td><%= row['status_ru'] %></td>
   </tr>
 <% end %>
